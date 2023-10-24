@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Reproductor</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js" defer></script>
+</head>
+
+<body>
+	<div id="contenedor" class="contenedor">
+		<div class="reproductor">
+			<div class="titulo">
+				<h2>Reproductor</h2>
+			</div>
+			<div class="lista">
+				<div class="cancion" onclick="elegirMusica(this)">
+					<audio src="music/Be Free.mp3" id="beFree" class="sonido"></audio>
+					<p>Be Free</p>
+				</div>
+				<div class="cancion" onclick="elegirMusica(this)">
+					<audio src="music/Labios compartidos.mp3" id="labios" class="sonido"></audio>
+					<p>Labios compartidos</p>
+				</div>
+				<div class="cancion" onclick="elegirMusica(this)">
+					<audio src="music/Toccata e fuga in D minor.mp3" id="toccata" class="sonido"></audio>
+					<p>Toccata e fuga in D minor</p>
+				</div>
+			</div>
+			<div class="controles">
+				<img id="loopButton" src="images/loop-button.png" onclick="repetirCancion()">
+				<img src="images/previous-button.png" onclick="cambiaCancion(0)">
+				<img id="playPause" src="images/play-button.png" onclick="reproducirMusica()">
+				<img src="images/next-button.png" onclick="cambiaCancion(1)">
+				<img id="randomButton" src="images/random-button.png" onclick="cancionAleatoria()">
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
